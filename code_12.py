@@ -7,11 +7,19 @@ def get_fibonacci_number(position):
 
 
 def get_fibonacci_number_sequence(number):
+    # base case
     if number == 0:
         return [0]
     if number == 1:
         return [0,1]
-    
+    # recursive calls
+    sequence = get_fibonacci_number_sequence(number - 1)
+
+    sequence.append(sequence[-1] + sequence[len(sequence) - 2])
+    return sequence
+
 
 if __name__ == "__main__":
-    print(get_fibonacci_number(7))
+    n = 7
+    print(get_fibonacci_number(n))
+    print(get_fibonacci_number_sequence(n))
