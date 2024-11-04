@@ -14,9 +14,10 @@ def get_fibonacci_number_sequence(number):
         return [1,1]
     # recursive calls
     sequence = get_fibonacci_number_sequence(number - 1)
-
+    # adding previous two from the sequence
     sequence.append(sequence[-1] + sequence[len(sequence) - 2])
-    return sequence
+    # [:number] cuts off the extra appended number at the end
+    return sequence[:number]
 
 
 if __name__ == "__main__":
