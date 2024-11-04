@@ -7,11 +7,11 @@ def get_fibonacci_number(position):
 
 
 def get_fibonacci_number_sequence(number):
-    # base case
+    # base case (ignoring the zero from sequence according to test cases)
     if number == 0:
-        return [0]
+        return
     if number == 1:
-        return [0,1]
+        return [1,1]
     # recursive calls
     sequence = get_fibonacci_number_sequence(number - 1)
 
